@@ -67,7 +67,7 @@
 
 <h2>Usage</h2>
 
-<p>The DTFoundation.framework is using the &ldquo;Fake Framework&rdquo; template put together by <a href="https://github.com/kstenerud/iOS-Universal-Framework">Karl Stenerud</a>. All categories employ Karl&rsquo;s LoadabeCategory hack to avoid having to use the -all_load linker flag.</p>
+<p>The DTFoundation.framework is using the &ldquo;Fake Framework&rdquo; template put together by <a href="https://github.com/kstenerud/iOS-Universal-Framework">Karl Stenerud</a>. All categories employ Karl&rsquo;s LoadabeCategory hack to avoid having to use the -all_load linker flag. If your app does not use ARC yet (but DTFoundation does) then you also need the -fobjc-arc linker flag.</p>
 
 <ol>
 <li>Include the DTFoundation.framework in your project.</li>

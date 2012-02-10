@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>UIView(DTFoundation) Category Reference</title>
+		<title>NSFileManager(DTFoundation) Category Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">UIView(DTFoundation) Category Reference</h1>
+				<h1 class="hideInXcode">NSFileManager(DTFoundation) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -44,9 +44,9 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/setRoundedCornersWithRadius:width:color:">&nbsp;&nbsp;&nbsp;&nbsp;- setRoundedCornersWithRadius:width:color:</option>
+	<option value="//api/name/removeItemAsynchronousAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;- removeItemAsynchronousAtPath:</option>
 	
-	<option value="//api/name/snapshotImage">&nbsp;&nbsp;&nbsp;&nbsp;- snapshotImage</option>
+	<option value="//api/name/removeItemAsynchronousAtURL:">&nbsp;&nbsp;&nbsp;&nbsp;- removeItemAsynchronousAtURL:</option>
 	
 	
 	
@@ -64,9 +64,7 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Getting Snapshot Images">Getting Snapshot Images</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Rounded Corners">Rounded Corners</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Asynchronous Operations">Asynchronous Operations</a></span></li>
 	
 </ul></li>
 
@@ -80,9 +78,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setRoundedCornersWithRadius:width:color:">setRoundedCornersWithRadius:width:color:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeItemAsynchronousAtPath:">removeItemAsynchronousAtPath:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/snapshotImage">snapshotImage</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeItemAsynchronousAtURL:">removeItemAsynchronousAtURL:</a></span></li>
 	
 </ul></li>
 
@@ -91,7 +89,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="UIView(DTFoundation) Category Reference" name="top"></a>
+				<a title="NSFileManager(DTFoundation) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -100,7 +98,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">UIView(DTFoundation) Category Reference</h1>
+						<h1 class="title title-header">NSFileManager(DTFoundation) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -108,7 +106,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">UIView+DTFoundation.h</td>
+	<td class="specification-value">NSFileManager+DTFoundation.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -118,7 +116,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>DTFoundation enhancements for <code>UIView</code></p>
+						<p>This category adds several useful file operations for <code>NSFileManager</code>.</p>
 					</div>
 					
 					
@@ -130,29 +128,21 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						<a title="Getting Snapshot Images" name="task_Getting Snapshot Images"></a>
-						<h3 class="subsubtitle task-title">Getting Snapshot Images</h3>
-
+						<a title="Asynchronous Operations" name="task_Asynchronous Operations"></a>
+						
+<h3 class="subsubtitle task-title">Asynchronous Operations</h3>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/snapshotImage">&ndash;&nbsp;snapshotImage</a></code>
-		<span class="tooltip"><p>Creates a snapshot of the receiver.</p></span>
+		<code><a href="#//api/name/removeItemAsynchronousAtPath:">&ndash;&nbsp;removeItemAsynchronousAtPath:</a></code>
+		<span class="tooltip"><p>Removes the file or directory at the specified path and immediately returns.</p></span>
 	</span>
 	
 	
-</li>
-						</ul>
-						
-						
-						<a title="Rounded Corners" name="task_Rounded Corners"></a>
-						<h3 class="subsubtitle task-title">Rounded Corners</h3>
-
-						<ul class="task-list">
-							<li>
+</li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/setRoundedCornersWithRadius:width:color:">&ndash;&nbsp;setRoundedCornersWithRadius:width:color:</a></code>
-		<span class="tooltip"><p>Sets the corner attributes of the receiver&rsquo;s layer.</p></span>
+		<code><a href="#//api/name/removeItemAsynchronousAtURL:">&ndash;&nbsp;removeItemAsynchronousAtURL:</a></code>
+		<span class="tooltip"><p>Removes the file or directory at the specified URL.</p></span>
 	</span>
 	
 	
@@ -174,35 +164,25 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/setRoundedCornersWithRadius:width:color:" title="setRoundedCornersWithRadius:width:color:"></a>
-	<h3 class="subsubtitle method-title">setRoundedCornersWithRadius:width:color:</h3>
+	<a name="//api/name/removeItemAsynchronousAtPath:" title="removeItemAsynchronousAtPath:"></a>
+	<h3 class="subsubtitle method-title">removeItemAsynchronousAtPath:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sets the corner attributes of the receiver&rsquo;s layer.</p>
+		<p>Removes the file or directory at the specified path and immediately returns.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)setRoundedCornersWithRadius:(CGFloat)<em>radius</em> width:(CGFloat)<em>width</em> color:(UIColor *)<em>color</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)removeItemAsynchronousAtPath:(NSString *)<em>path</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>radius</em></dt>
-			<dd><p>The corner radius.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>width</em></dt>
-			<dd><p>The width of the border line.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>color</em></dt>
-			<dd><p>The color to be used for the border line. Can be <code>nil</code> to leave it unchanged.</p></dd>
+			<dt><em>path</em></dt>
+			<dd><p>A path string indicating the file or directory to remove. If the path specifies a directory, the contents of that directory are recursively removed.</p></dd>
 		</dl>
 		
 	</div>
@@ -215,7 +195,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The advantage of using this method is that you do not need to import the QuartzCore headers just for setting the corners.</p>
+		<p>This method moves the given item to a temporary name which is an instant operation. It then schedules an asynchronous background operation to actually remove the item.</p>
 	</div>
 	
 	
@@ -226,36 +206,46 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIView+DTFoundation.h</code><br />
+		<code class="declared-in-ref">NSFileManager+DTFoundation.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/snapshotImage" title="snapshotImage"></a>
-	<h3 class="subsubtitle method-title">snapshotImage</h3>
+	<a name="//api/name/removeItemAsynchronousAtURL:" title="removeItemAsynchronousAtURL:"></a>
+	<h3 class="subsubtitle method-title">removeItemAsynchronousAtURL:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Creates a snapshot of the receiver.</p>
+		<p>Removes the file or directory at the specified URL.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (UIImage *)snapshotImage</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)removeItemAsynchronousAtURL:(NSURL *)<em>URL</em></code></div>
 	
 	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>Returns a bitmap image with the same contents and dimensions as the receiver.</p>
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>URL</em></dt>
+			<dd><p>A file URL specifying the file or directory to remove. If the URL specifies a directory, the contents of that directory are recursively removed.</p></dd>
+		</dl>
+		
 	</div>
 	
 	
 	
 	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method moves the given item to a temporary name which is an instant operation. It then schedules an asynchronous background operation to actually remove the item.</p>
+	</div>
 	
 	
 	
@@ -265,7 +255,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIView+DTFoundation.h</code><br />
+		<code class="declared-in-ref">NSFileManager+DTFoundation.h</code><br />
 	</div>				
 	
 	

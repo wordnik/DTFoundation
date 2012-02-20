@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>DTHTMLParserDelegate Protocol Reference</title>
+		<title>DTASN1ParserDelegate Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">DTHTMLParserDelegate Protocol Reference</h1>
+				<h1 class="hideInXcode">DTASN1ParserDelegate Protocol Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -44,21 +44,27 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/parser:didEndElement:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:didEndElement:</option>
+	<option value="//api/name/parser:didEndContainerWithType:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:didEndContainerWithType:</option>
 	
-	<option value="//api/name/parser:didStartElement:attributes:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:didStartElement:attributes:</option>
+	<option value="//api/name/parser:didStartContainerWithType:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:didStartContainerWithType:</option>
 	
-	<option value="//api/name/parser:foundCDATA:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:foundCDATA:</option>
+	<option value="//api/name/parser:foundData:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:foundData:</option>
 	
-	<option value="//api/name/parser:foundCharacters:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:foundCharacters:</option>
+	<option value="//api/name/parser:foundDate:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:foundDate:</option>
 	
-	<option value="//api/name/parser:foundComment:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:foundComment:</option>
+	<option value="//api/name/parser:foundNumber:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:foundNumber:</option>
+	
+	<option value="//api/name/parser:foundObjectIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:foundObjectIdentifier:</option>
+	
+	<option value="//api/name/parser:foundString:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:foundString:</option>
 	
 	<option value="//api/name/parser:parseErrorOccurred:">&nbsp;&nbsp;&nbsp;&nbsp;- parser:parseErrorOccurred:</option>
 	
 	<option value="//api/name/parserDidEndDocument:">&nbsp;&nbsp;&nbsp;&nbsp;- parserDidEndDocument:</option>
 	
 	<option value="//api/name/parserDidStartDocument:">&nbsp;&nbsp;&nbsp;&nbsp;- parserDidStartDocument:</option>
+	
+	<option value="//api/name/parserFoundNull:">&nbsp;&nbsp;&nbsp;&nbsp;- parserFoundNull:</option>
 	
 	
 	
@@ -88,21 +94,27 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:didEndElement:">parser:didEndElement:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:didEndContainerWithType:">parser:didEndContainerWithType:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:didStartElement:attributes:">parser:didStartElement:attributes:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:didStartContainerWithType:">parser:didStartContainerWithType:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:foundCDATA:">parser:foundCDATA:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:foundData:">parser:foundData:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:foundCharacters:">parser:foundCharacters:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:foundDate:">parser:foundDate:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:foundComment:">parser:foundComment:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:foundNumber:">parser:foundNumber:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:foundObjectIdentifier:">parser:foundObjectIdentifier:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:foundString:">parser:foundString:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parser:parseErrorOccurred:">parser:parseErrorOccurred:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parserDidEndDocument:">parserDidEndDocument:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parserDidStartDocument:">parserDidStartDocument:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parserFoundNull:">parserFoundNull:</a></span></li>
 	
 </ul></li>
 
@@ -111,7 +123,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="DTHTMLParserDelegate Protocol Reference" name="top"></a>
+				<a title="DTASN1ParserDelegate Protocol Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -120,7 +132,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">DTHTMLParserDelegate Protocol Reference</h1>
+						<h1 class="title title-header">DTASN1ParserDelegate Protocol Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -131,7 +143,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">DTHTMLParser.h</td>
+	<td class="specification-value">DTASN1Parser.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -141,9 +153,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The <a href="DTHTMLParserDelegate.html">DTHTMLParserDelegate</a> protocol defines the optional methods implemented by delegates of <a href="../Classes/DTHTMLParser.html">DTHTMLParser</a> objects.</p>
-
-<p>Dependencies: libxml2.dylib</p>
+						<p>The <a href="DTASN1ParserDelegate.html">DTASN1ParserDelegate</a> protocol defines the optional methods implemented by delegates of <a href="../Classes/DTASN1Parser.html">DTASN1Parser</a> objects.</p>
 					</div>
 					
 					
@@ -175,36 +185,15 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/parser:didStartElement:attributes:">&ndash;&nbsp;parser:didStartElement:attributes:</a></code>
-		<span class="tooltip"><p>Sent by a parser object to its delegate when it encounters a start tag for a given element.</p></span>
+		<code><a href="#//api/name/parser:didStartContainerWithType:">&ndash;&nbsp;parser:didStartContainerWithType:</a></code>
+		<span class="tooltip"><p>Sent by a parser object to its delegate when it encounters the beginning of a constructed element.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/parser:didEndElement:">&ndash;&nbsp;parser:didEndElement:</a></code>
-		<span class="tooltip"><p>Sent by a parser object to its delegate when it encounters an end tag for a specific element.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/parser:foundCharacters:">&ndash;&nbsp;parser:foundCharacters:</a></code>
-		<span class="tooltip"><p>Sent by a parser object to provide its delegate with a string representing all or part of the characters of the current element.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/parser:foundComment:">&ndash;&nbsp;parser:foundComment:</a></code>
-		<span class="tooltip"><p>Sent by a parser object to its delegate when it encounters a comment in the HTML.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/parser:foundCDATA:">&ndash;&nbsp;parser:foundCDATA:</a></code>
-		<span class="tooltip"><p>Sent by a parser object to its delegate when it encounters a CDATA block.</p></span>
+		<code><a href="#//api/name/parser:didEndContainerWithType:">&ndash;&nbsp;parser:didEndContainerWithType:</a></code>
+		<span class="tooltip"><p>Sent by a parser object to its delegate when it encounters the end of a constructed element.</p></span>
 	</span>
 	
 	
@@ -212,6 +201,48 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/parser:parseErrorOccurred:">&ndash;&nbsp;parser:parseErrorOccurred:</a></code>
 		<span class="tooltip"><p>Sent by a parser object to its delegate when it encounters a fatal error.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parserFoundNull:">&ndash;&nbsp;parserFoundNull:</a></code>
+		<span class="tooltip"><p>Sent by a parser object when a NULL element is encountered.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parser:foundDate:">&ndash;&nbsp;parser:foundDate:</a></code>
+		<span class="tooltip"><p>Sent by a parser object when a NULL type is encountered.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parser:foundObjectIdentifier:">&ndash;&nbsp;parser:foundObjectIdentifier:</a></code>
+		<span class="tooltip"><p>Sent by a parser object to provide its delegate with the object identifier encoded in the current element.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parser:foundString:">&ndash;&nbsp;parser:foundString:</a></code>
+		<span class="tooltip"><p>Sent by a parser object to provide its delegate with the string encoded in the current element.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parser:foundData:">&ndash;&nbsp;parser:foundData:</a></code>
+		<span class="tooltip"><p>Sent by a parser object to provide its delegate with the data encoded in the current element.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parser:foundNumber:">&ndash;&nbsp;parser:foundNumber:</a></code>
+		<span class="tooltip"><p>Sent by a parser object to provide its delegate with number values encoded in the current element.</p></span>
 	</span>
 	
 	
@@ -233,17 +264,17 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/parser:didEndElement:" title="parser:didEndElement:"></a>
-	<h3 class="subsubtitle method-title">parser:didEndElement:</h3>
+	<a name="//api/name/parser:didEndContainerWithType:" title="parser:didEndContainerWithType:"></a>
+	<h3 class="subsubtitle method-title">parser:didEndContainerWithType:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sent by a parser object to its delegate when it encounters an end tag for a specific element.</p>
+		<p>Sent by a parser object to its delegate when it encounters the end of a constructed element.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)parser:(DTHTMLParser *)<em>parser</em> didEndElement:(NSString *)<em>elementName</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)parser:(DTASN1Parser *)<em>parser</em> didEndContainerWithType:(DTASN1Type)<em>type</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -255,7 +286,7 @@
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>elementName</em></dt>
+			<dt><em>type</em></dt>
 			<dd><p>A string that is the name of an element (in its end tag).</p></dd>
 		</dl>
 		
@@ -275,24 +306,24 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/parser:didStartElement:attributes:" title="parser:didStartElement:attributes:"></a>
-	<h3 class="subsubtitle method-title">parser:didStartElement:attributes:</h3>
+	<a name="//api/name/parser:didStartContainerWithType:" title="parser:didStartContainerWithType:"></a>
+	<h3 class="subsubtitle method-title">parser:didStartContainerWithType:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sent by a parser object to its delegate when it encounters a start tag for a given element.</p>
+		<p>Sent by a parser object to its delegate when it encounters the beginning of a constructed element.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)parser:(DTHTMLParser *)<em>parser</em> didStartElement:(NSString *)<em>elementName</em> attributes:(NSDictionary *)<em>attributeDict</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)parser:(DTASN1Parser *)<em>parser</em> didStartContainerWithType:(DTASN1Type)<em>type</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -304,13 +335,8 @@
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>elementName</em></dt>
-			<dd><p>A string that is the name of an element (in its start tag).</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>attributeDict</em></dt>
-			<dd><p>A dictionary that contains any attributes associated with the element. Keys are the names of attributes, and values are attribute values.</p></dd>
+			<dt><em>type</em></dt>
+			<dd><p>The tag type that contains the subsequent elements.</p></dd>
 		</dl>
 		
 	</div>
@@ -329,24 +355,24 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/parser:foundCDATA:" title="parser:foundCDATA:"></a>
-	<h3 class="subsubtitle method-title">parser:foundCDATA:</h3>
+	<a name="//api/name/parser:foundData:" title="parser:foundData:"></a>
+	<h3 class="subsubtitle method-title">parser:foundData:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sent by a parser object to its delegate when it encounters a CDATA block.</p>
+		<p>Sent by a parser object to provide its delegate with the data encoded in the current element.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)parser:(DTHTMLParser *)<em>parser</em> foundCDATA:(NSData *)<em>CDATABlock</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)parser:(DTASN1Parser *)<em>parser</em> foundData:(NSData *)<em>data</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -354,12 +380,12 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>parser</em></dt>
-			<dd><p>A <a href="../Classes/DTHTMLParser.html">DTHTMLParser</a> object parsing HTML.</p></dd>
+			<dd><p>A parser object.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>CDATABlock</em></dt>
-			<dd><p>A data object containing a block of CDATA.</p></dd>
+			<dt><em>data</em></dt>
+			<dd><p>A data object representing the contents of the current element.</p></dd>
 		</dl>
 		
 	</div>
@@ -372,7 +398,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Through this method the parser object passes the contents of the block to its delegate in an NSData object. The CDATA block is character data that is ignored by the parser. The encoding of the character data is UTF-8. To convert the data object to a string object, use the NSString method initWithData:encoding:. Note: CSS style blocks are returned as CDATA.</p>
+		<p>Both bit strings and octet strings are provided via this method. Also Integer data that is longer than 32 bits is provided this way.</p>
 	</div>
 	
 	
@@ -383,24 +409,176 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/parser:foundCharacters:" title="parser:foundCharacters:"></a>
-	<h3 class="subsubtitle method-title">parser:foundCharacters:</h3>
+	<a name="//api/name/parser:foundDate:" title="parser:foundDate:"></a>
+	<h3 class="subsubtitle method-title">parser:foundDate:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sent by a parser object to provide its delegate with a string representing all or part of the characters of the current element.</p>
+		<p>Sent by a parser object when a NULL type is encountered.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)parser:(DTHTMLParser *)<em>parser</em> foundCharacters:(NSString *)<em>string</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)parser:(DTASN1Parser *)<em>parser</em> foundDate:(NSDate *)<em>date</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parser</em></dt>
+			<dd><p>A parser object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>date</em></dt>
+			<dd><p>A date representing the date encoded in the current element.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parser:foundNumber:" title="parser:foundNumber:"></a>
+	<h3 class="subsubtitle method-title">parser:foundNumber:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent by a parser object to provide its delegate with number values encoded in the current element.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)parser:(DTASN1Parser *)<em>parser</em> foundNumber:(NSNumber *)<em>number</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parser</em></dt>
+			<dd><p>A parser object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>number</em></dt>
+			<dd><p>A number object representing the contents of the current element.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Note that number values that are longer than supported by the system are provided as Data instead.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parser:foundObjectIdentifier:" title="parser:foundObjectIdentifier:"></a>
+	<h3 class="subsubtitle method-title">parser:foundObjectIdentifier:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent by a parser object to provide its delegate with the object identifier encoded in the current element.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)parser:(DTASN1Parser *)<em>parser</em> foundObjectIdentifier:(NSString *)<em>objIdentifier</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parser</em></dt>
+			<dd><p>A parser object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>objIdentifier</em></dt>
+			<dd><p>A string representing the object identifier encoded in the current element.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parser:foundString:" title="parser:foundString:"></a>
+	<h3 class="subsubtitle method-title">parser:foundString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent by a parser object to provide its delegate with the string encoded in the current element.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)parser:(DTASN1Parser *)<em>parser</em> foundString:(NSString *)<em>string</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -413,7 +591,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>string</em></dt>
-			<dd><p>A string representing the complete or partial textual content of the current element.</p></dd>
+			<dd><p>A string contained in the current element.</p></dd>
 		</dl>
 		
 	</div>
@@ -426,7 +604,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The parser object may send the delegate several <a href="#//api/name/parser:foundCharacters:">parser:foundCharacters:</a> messages to report the characters of an element. Because string may be only part of the total character content for the current element, you should append it to the current accumulation of characters until the element changes.</p>
+		<p>All the ASN1 string types are provided via this method.</p>
 	</div>
 	
 	
@@ -437,56 +615,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/parser:foundComment:" title="parser:foundComment:"></a>
-	<h3 class="subsubtitle method-title">parser:foundComment:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Sent by a parser object to its delegate when it encounters a comment in the HTML.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>- (void)parser:(DTHTMLParser *)<em>parser</em> foundComment:(NSString *)<em>comment</em></code></div>
-	
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>parser</em></dt>
-			<dd><p>A <a href="../Classes/DTHTMLParser.html">DTHTMLParser</a> object parsing HTML.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>comment</em></dt>
-			<dd><p>A string that is a the content of a comment in the XML.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	
@@ -503,7 +632,7 @@
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)parser:(DTHTMLParser *)<em>parser</em> parseErrorOccurred:(NSError *)<em>parseError</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)parser:(DTASN1Parser *)<em>parser</em> parseErrorOccurred:(NSError *)<em>parseError</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -540,7 +669,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	
@@ -557,7 +686,7 @@
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)parserDidEndDocument:(DTHTMLParser *)<em>parser</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)parserDidEndDocument:(DTASN1Parser *)<em>parser</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -584,7 +713,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	
@@ -601,7 +730,7 @@
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)parserDidStartDocument:(DTHTMLParser *)<em>parser</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)parserDidStartDocument:(DTASN1Parser *)<em>parser</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -628,7 +757,51 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parserFoundNull:" title="parserFoundNull:"></a>
+	<h3 class="subsubtitle method-title">parserFoundNull:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent by a parser object when a NULL element is encountered.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)parserFoundNull:(DTASN1Parser *)<em>parser</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parser</em></dt>
+			<dd><p>A parser object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	

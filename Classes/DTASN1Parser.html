@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>DTHTMLParser Class Reference</title>
+		<title>DTASN1Parser Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">DTHTMLParser Class Reference</h1>
+				<h1 class="hideInXcode">DTASN1Parser Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -40,15 +40,7 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/columnNumber">&nbsp;&nbsp;&nbsp;&nbsp;columnNumber</option>
-	
-	<option value="//api/name/lineNumber">&nbsp;&nbsp;&nbsp;&nbsp;lineNumber</option>
-	
 	<option value="//api/name/parserError">&nbsp;&nbsp;&nbsp;&nbsp;parserError</option>
-	
-	<option value="//api/name/publicID">&nbsp;&nbsp;&nbsp;&nbsp;publicID</option>
-	
-	<option value="//api/name/systemID">&nbsp;&nbsp;&nbsp;&nbsp;systemID</option>
 	
 	
 	
@@ -61,7 +53,7 @@
 	
 	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;- delegate</option>
 	
-	<option value="//api/name/initWithData:encoding:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithData:encoding:</option>
+	<option value="//api/name/initWithData:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithData:</option>
 	
 	<option value="//api/name/parse">&nbsp;&nbsp;&nbsp;&nbsp;- parse</option>
 	
@@ -95,15 +87,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/columnNumber">columnNumber</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineNumber">lineNumber</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parserError">parserError</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/publicID">publicID</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/systemID">systemID</a></span></li>
 	
 </ul></li>
 
@@ -117,7 +101,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithData:encoding:">initWithData:encoding:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithData:">initWithData:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parse">parse</a></span></li>
 	
@@ -130,7 +114,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="DTHTMLParser Class Reference" name="top"></a>
+				<a title="DTASN1Parser Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -139,7 +123,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">DTHTMLParser Class Reference</h1>
+						<h1 class="title title-header">DTASN1Parser Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -150,7 +134,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">DTHTMLParser.h</td>
+	<td class="specification-value">DTASN1Parser.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -160,7 +144,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Instances of this class <a href="#//api/name/parse">parse</a> HTML documents (including DTD declarations) in an event-driven manner. A <a href="DTHTMLParser.html">DTHTMLParser</a> notifies its <a href="#//api/name/delegate">delegate</a> about the items (elements, attributes, CDATA blocks, comments, and so on) that it encounters as it processes an HTML document. It does not itself do anything with those parsed items except report them. It also reports parsing errors. For convenience, an <a href="DTHTMLParser.html">DTHTMLParser</a> object in the following descriptions is sometimes referred to as a parser object.</p>
+						<p>Instances of this class <a href="#//api/name/parse">parse</a> ASN1 documents in an event-driven manner. A <a href="DTASN1Parser.html">DTASN1Parser</a> notifies its <a href="#//api/name/delegate">delegate</a> about the items (elements, collections, and so on) that it encounters as it processes an ASN1 document. It does not itself do anything with those parsed items except report them. It also reports parsing errors. For convenience, a <a href="DTASN1Parser.html">DTASN1Parser</a> object in the following descriptions is sometimes referred to as a parser object.</p>
 					</div>
 					
 					
@@ -178,8 +162,8 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithData:encoding:">&ndash;&nbsp;initWithData:encoding:</a></code>
-		<span class="tooltip"><p>Initializes the receiver with the HTML contents encapsulated in a given data object.</p></span>
+		<code><a href="#//api/name/initWithData:">&ndash;&nbsp;initWithData:</a></code>
+		<span class="tooltip"><p>Initializes the receiver with the ASN1 contents encapsulated in a given data object.</p></span>
 	</span>
 	
 	
@@ -221,36 +205,8 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/columnNumber">&nbsp;&nbsp;columnNumber</a></code>
-		<span class="tooltip"><p>Returns the column number of the XML document being processed by the receiver.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/lineNumber">&nbsp;&nbsp;lineNumber</a></code>
-		<span class="tooltip"><p>Returns the line number of the HTML document being processed by the receiver.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/parserError">&nbsp;&nbsp;parserError</a></code>
 		<span class="tooltip"><p>Returns an <code>NSError</code> object from which you can obtain information about a parsing error.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/publicID">&nbsp;&nbsp;publicID</a></code>
-		<span class="tooltip"><p>Returns the public identifier of the external entity referenced in the HTML document.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/systemID">&nbsp;&nbsp;systemID</a></code>
-		<span class="tooltip"><p>Returns the system identifier of the external entity referenced in the HTML document.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -266,84 +222,6 @@
 					<div class="section section-methods">
 						<a title="Properties" name="properties"></a>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/columnNumber" title="columnNumber"></a>
-	<h3 class="subsubtitle method-title">columnNumber</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns the column number of the XML document being processed by the receiver.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInteger columnNumber</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The column refers to the nesting level of the HTML elements in the document. You may invoke this method once a parsing operation has begun or after an error occurs.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/lineNumber" title="lineNumber"></a>
-	<h3 class="subsubtitle method-title">lineNumber</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns the line number of the HTML document being processed by the receiver.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInteger lineNumber</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>You may invoke this method once a parsing operation has begun or after an error occurs.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
-	</div>				
-	
-	
-</div>
 						
 						<div class="section-method">
 	<a name="//api/name/parserError" title="parserError"></a>
@@ -378,85 +256,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/publicID" title="publicID"></a>
-	<h3 class="subsubtitle method-title">publicID</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns the public identifier of the external entity referenced in the HTML document.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *publicID</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>You may invoke this method once a parsing operation has begun or after an error occurs.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/systemID" title="systemID"></a>
-	<h3 class="subsubtitle method-title">systemID</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns the system identifier of the external entity referenced in the HTML document.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *systemID</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>You may invoke this method once a parsing operation has begun or after an error occurs.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	
@@ -511,7 +311,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	
@@ -528,7 +328,7 @@
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (id&lt;DTHTMLParserDelegate&gt;)delegate</code></div>
+	<div class="method-subsection method-declaration"><code>- (id&lt;DTASN1ParserDelegate&gt;)delegate</code></div>
 	
 	
 	
@@ -554,24 +354,24 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithData:encoding:" title="initWithData:encoding:"></a>
-	<h3 class="subsubtitle method-title">initWithData:encoding:</h3>
+	<a name="//api/name/initWithData:" title="initWithData:"></a>
+	<h3 class="subsubtitle method-title">initWithData:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initializes the receiver with the HTML contents encapsulated in a given data object.</p>
+		<p>Initializes the receiver with the ASN1 contents encapsulated in a given data object.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (id)initWithData:(NSData *)<em>data</em> encoding:(NSStringEncoding)<em>encoding</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initWithData:(NSData *)<em>data</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -579,12 +379,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>data</em></dt>
-			<dd><p>An <code>NSData</code> object containing XML markup.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>encoding</em></dt>
-			<dd><p>The encoding used for encoding the HTML data</p></dd>
+			<dd><p>An <code>NSData</code> object containing ASN1 encoded data.</p></dd>
 		</dl>
 		
 	</div>
@@ -593,7 +388,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An initialized <a href="DTHTMLParser.html"><code>DTHTMLParser</code></a> object or nil if an error occurs.</p>
+		<p>An initialized <a href="DTASN1Parser.html"><code>DTASN1Parser</code></a> object or nil if an error occurs.</p>
 	</div>
 	
 	
@@ -608,7 +403,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	
@@ -652,7 +447,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	
@@ -669,7 +464,7 @@
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)setDelegate:(id&lt;DTHTMLParserDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setDelegate:(id&lt;DTASN1ParserDelegate&gt;)<em>delegate</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -677,7 +472,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>delegate</em></dt>
-			<dd><p>An object that is the new <a href="#//api/name/delegate">delegate</a>. It is not retained. The <a href="#//api/name/delegate">delegate</a> must conform to the <a href="../Protocols/DTHTMLParserDelegate.html">DTHTMLParserDelegate</a> Protocol protocol.</p></dd>
+			<dd><p>An object that is the new <a href="#//api/name/delegate">delegate</a>. It is not retained. The <a href="#//api/name/delegate">delegate</a> must conform to the <a href="../Protocols/DTASN1ParserDelegate.html">DTASN1ParserDelegate</a> Protocol protocol.</p></dd>
 		</dl>
 		
 	</div>
@@ -705,7 +500,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTHTMLParser.h</code><br />
+		<code class="declared-in-ref">DTASN1Parser.h</code><br />
 	</div>				
 	
 	

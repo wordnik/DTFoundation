@@ -12,38 +12,49 @@
 MAKE_CATEGORIES_LOADABLE(UIImage_DTFoundation);
 
 
+// This should be conditionally compiled so subprojects still work...
+@interface NIKApiInvoker : NSObject {
+    
+}
+
++ (NIKApiInvoker*)sharedInstance;
+
+- (void)startLoad;
+- (void)stopLoad;
+
+@end
+
 
 @implementation UIImage (DTFoundation)
 
 #pragma mark Loading
 
+
+#pragma warning Start progress spinner
+
 + (UIImage *)imageWithContentsOfURL:(NSURL *)URL cachePolicy:(NSURLRequestCachePolicy)cachePolicy error:(NSError **)error
 {
 	NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:cachePolicy timeoutInterval:10.0];
-	
 	NSCachedURLResponse *cacheResponse = [[NSURLCache sharedURLCache] cachedResponseForRequest:request];
-	
 	NSData *data;
 	
 	if (cacheResponse)
 	{
 		data = [cacheResponse data];
-		NSLog(@"cache hit");
-	}
-	else {
-		NSLog(@"cache fail");
 	}
 
-	
+    [[NIKApiInvoker sharedInstance] startLoad];
 	NSURLResponse *response;
-	data = [NSURLConnection sendSynchronousRequest:request
-										 returningResponse:&response
-													 error:error];
-	
+	data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:error];
+    [[NIKApiInvoker sharedInstance] stopLoad];
+    
 	if (!data)
 	{
-		NSLog(@"Error loading image at %@", URL);
-		return nil;
+		NSLog(@"Error (%@) loading image at %@", *error, URL);
+        
+        // return a broken image?
+        UIImage *image = [UIImage imageNamed:@"broken_heart.png"];
+		return image;
 	}
 	
 	UIImage *image = [UIImage imageWithData:data];

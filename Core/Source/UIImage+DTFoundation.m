@@ -30,8 +30,6 @@ MAKE_CATEGORIES_LOADABLE(UIImage_DTFoundation);
 #pragma mark Loading
 
 
-#pragma warning Start progress spinner
-
 + (UIImage *)imageWithContentsOfURL:(NSURL *)URL cachePolicy:(NSURLRequestCachePolicy)cachePolicy error:(NSError **)error
 {
 	NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:cachePolicy timeoutInterval:10.0];

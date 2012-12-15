@@ -46,9 +46,9 @@ MAKE_CATEGORIES_LOADABLE(UIImage_DTFoundation);
 	data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:error];
     [[NIKApiInvoker sharedInstance] stopLoad];
     
-	if (!data)
+	if (!data || *error)
 	{
-		NSLog(@"Error (%@) loading image at %@", *error, URL);
+		NSLog(@"Error (%@) loading image at %@ data %@", *error, URL, data);
         
         // return a broken image?
         UIImage *image = [UIImage imageNamed:@"broken_heart.png"];

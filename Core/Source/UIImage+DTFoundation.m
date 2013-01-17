@@ -48,7 +48,9 @@ MAKE_CATEGORIES_LOADABLE(UIImage_DTFoundation);
     
 	if (!data || *error)
 	{
+#ifdef DEBUG
 		NSLog(@"Error (%@) loading image at %@ data %@", *error, URL, data);
+#endif
         
         // return a broken image?
         UIImage *image = [UIImage imageNamed:@"broken_heart.png"];

@@ -21,7 +21,6 @@
 #import "DTDownload.h"
 #import "DTExtendedFileAttributes.h"
 #import "DTHTMLParser.h"
-#import "DTPDFDocument.h"
 #import "DTVersion.h"
 #import "DTZipArchive.h"
 
@@ -41,11 +40,11 @@
 #import "NSString+DTPaths.h"
 #import "NSString+DTURLEncoding.h"
 #import "NSString+DTUTI.h"
-#import "NSURL+DTAppLinks.h"
 #import "NSURL+DTComparing.h"
 #import "NSURL+DTUnshorten.h"
 
 #if TARGET_OS_IPHONE
+	#import "NSURL+DTAppLinks.h"
 	#import "UIApplication+DTNetworkActivity.h"
 	#import "UIImage+DTFoundation.h"
 	#import "UIView+DTFoundation.h"
@@ -54,6 +53,7 @@
 #else
 	#import "NSImage+DTUtilities.h"
 	#import "NSDocument+DTFoundation.h"
+    #import "NSValue+DTConversion.h"
 	#import "NSView+DTAutoLayout.h"
 	#import "NSWindowController+DTPanelControllerPresenting.h"
 #endif

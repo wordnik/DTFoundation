@@ -8,24 +8,18 @@
 
 #import "NSURL+DTAppLinks.h"
 
-
-// force this category to be loaded by linker
-MAKE_CATEGORIES_LOADABLE(NSURL_DTAppLinks);
-
 @implementation NSURL (DTAppLinks)
 
 + (NSURL *)appStoreURLforApplicationIdentifier:(NSString *)identifier
 {
-	NSString *link = [NSString stringWithFormat:@"itms://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=%@&mt=8", 
-					  identifier];
+	NSString *link = [NSString stringWithFormat:@"http://itunes.apple.com/us/app/id%@?mt=8", identifier];
 	
 	return [NSURL URLWithString:link];
 }
 
 + (NSURL *)appStoreReviewURLForApplicationIdentifier:(NSString *)identifier
 {
-	NSString *link = [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",
-					  identifier];
+	NSString *link = [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", identifier];
 	return [NSURL URLWithString:link];
 }
 

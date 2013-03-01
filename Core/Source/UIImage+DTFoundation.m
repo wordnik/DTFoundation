@@ -23,10 +23,10 @@
 	if (cacheResponse)
 	{
 		data = [cacheResponse data];
-		NSLog(@"cache hit");
+	//	NSLog(@"cache hit");
 	}
 	else {
-		NSLog(@"cache fail");
+	//	NSLog(@"cache fail");
 	}
 
 	

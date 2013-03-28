@@ -37,7 +37,11 @@
 	
 	if (!data)
 	{
-		NSLog(@"Error loading image at %@", URL);
+        
+        // Don't report offline errors
+        if (*error && [*error code] != -1009) {
+            NSLog(@"Error %@ loading image at %@", *error, URL);
+        }
 		return nil;
 	}
 	
